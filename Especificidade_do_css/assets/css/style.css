@@ -1,0 +1,31 @@
+/*
+    Maiores especificidades.
+1° ID
+2° Classes
+3° Atributos e pseudo-classes.
+4° Elementos e pseudo-elementos
+*/
+
+/* especificidade 1,0,0 */
+#p{
+    background: red;
+}
+
+/* especificidade 1,1,1 */
+#p.p{
+    background: blue !important;
+}
+
+/* especificidade 1,1,1 */
+p#p.p{
+    background: green;
+}
+/* especificidade 2,1,2 */
+body#b p#p.p{
+    background: purple !important;
+}
+
+/* especificidade 2,2,2 */
+body#b.bclass p#p.p{
+    background: orange;
+}
